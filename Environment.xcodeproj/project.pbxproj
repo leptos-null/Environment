@@ -15,6 +15,10 @@
 		FAB8F88D279B653A00F21628 /* Environment WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAB8F88C279B653A00F21628 /* Environment WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAB8F892279B653A00F21628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F891279B653A00F21628 /* ContentView.swift */; };
 		FAB8F894279B653A00F21628 /* EnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F893279B653A00F21628 /* EnvironmentApp.swift */; };
+		FAB8F8C2279BB4DF00F21628 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */; };
+		FAB8F8C3279BB4DF00F21628 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */; };
+		FAB8F8C5279BB95200F21628 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C4279BB95200F21628 /* Barometer.swift */; };
+		FAB8F8C6279BB95200F21628 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C4279BB95200F21628 /* Barometer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,8 @@
 		FAB8F891279B653A00F21628 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAB8F893279B653A00F21628 /* EnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentApp.swift; sourceTree = "<group>"; };
 		FAB8F89C279B653B00F21628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		FAB8F8C4279BB95200F21628 /* Barometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		FAB8F86A279B653800F21628 = {
 			isa = PBXGroup;
 			children = (
+				FAB8F8BD279BB4A400F21628 /* Shared */,
 				FAB8F875279B653800F21628 /* Environment */,
 				FAB8F885279B653900F21628 /* Environment WatchKit App */,
 				FAB8F890279B653A00F21628 /* Environment WatchKit Extension */,
@@ -136,6 +143,15 @@
 				FAB8F89C279B653B00F21628 /* Info.plist */,
 			);
 			path = "Environment WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FAB8F8BD279BB4A400F21628 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */,
+				FAB8F8C4279BB95200F21628 /* Barometer.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +283,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB8F879279B653800F21628 /* ContentView.swift in Sources */,
+				FAB8F8C2279BB4DF00F21628 /* MotionManager.swift in Sources */,
 				FAB8F877279B653800F21628 /* EnvironmentApp.swift in Sources */,
+				FAB8F8C5279BB95200F21628 /* Barometer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB8F892279B653A00F21628 /* ContentView.swift in Sources */,
+				FAB8F8C3279BB4DF00F21628 /* MotionManager.swift in Sources */,
 				FAB8F894279B653A00F21628 /* EnvironmentApp.swift in Sources */,
+				FAB8F8C6279BB95200F21628 /* Barometer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
