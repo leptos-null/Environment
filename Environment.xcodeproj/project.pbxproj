@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA496143279BCD7500C8EFB6 /* BarometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA496142279BCD7500C8EFB6 /* BarometerView.swift */; };
+		FA496144279BCD7500C8EFB6 /* BarometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA496142279BCD7500C8EFB6 /* BarometerView.swift */; };
+		FA496145279C7DB800C8EFB6 /* RawMotionManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8CC279BCCCD00F21628 /* RawMotionManagerView.swift */; };
 		FAB8F877279B653800F21628 /* EnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F876279B653800F21628 /* EnvironmentApp.swift */; };
 		FAB8F879279B653800F21628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F878279B653800F21628 /* ContentView.swift */; };
 		FAB8F87B279B653900F21628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB8F87A279B653900F21628 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 		FAB8F8C3279BB4DF00F21628 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */; };
 		FAB8F8C5279BB95200F21628 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C4279BB95200F21628 /* Barometer.swift */; };
 		FAB8F8C6279BB95200F21628 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C4279BB95200F21628 /* Barometer.swift */; };
+		FAB8F8CA279BC1F400F21628 /* RawMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C7279BBE3A00F21628 /* RawMotionManager.swift */; };
+		FAB8F8CB279BC1F400F21628 /* RawMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8C7279BBE3A00F21628 /* RawMotionManager.swift */; };
+		FAB8F8CE279BCCCD00F21628 /* RawMotionManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8F8CC279BCCCD00F21628 /* RawMotionManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA496142279BCD7500C8EFB6 /* BarometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerView.swift; sourceTree = "<group>"; };
 		FAB8F873279B653800F21628 /* Environment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Environment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB8F876279B653800F21628 /* EnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentApp.swift; sourceTree = "<group>"; };
 		FAB8F878279B653800F21628 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +83,8 @@
 		FAB8F89C279B653B00F21628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		FAB8F8C4279BB95200F21628 /* Barometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
+		FAB8F8C7279BBE3A00F21628 /* RawMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawMotionManager.swift; sourceTree = "<group>"; };
+		FAB8F8CC279BCCCD00F21628 /* RawMotionManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawMotionManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +159,9 @@
 			children = (
 				FAB8F8C1279BB4DF00F21628 /* MotionManager.swift */,
 				FAB8F8C4279BB95200F21628 /* Barometer.swift */,
+				FAB8F8C7279BBE3A00F21628 /* RawMotionManager.swift */,
+				FAB8F8CC279BCCCD00F21628 /* RawMotionManagerView.swift */,
+				FA496142279BCD7500C8EFB6 /* BarometerView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -282,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB8F8CA279BC1F400F21628 /* RawMotionManager.swift in Sources */,
 				FAB8F879279B653800F21628 /* ContentView.swift in Sources */,
+				FA496143279BCD7500C8EFB6 /* BarometerView.swift in Sources */,
+				FA496145279C7DB800C8EFB6 /* RawMotionManagerView.swift in Sources */,
 				FAB8F8C2279BB4DF00F21628 /* MotionManager.swift in Sources */,
 				FAB8F877279B653800F21628 /* EnvironmentApp.swift in Sources */,
 				FAB8F8C5279BB95200F21628 /* Barometer.swift in Sources */,
@@ -293,10 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB8F8CB279BC1F400F21628 /* RawMotionManager.swift in Sources */,
 				FAB8F892279B653A00F21628 /* ContentView.swift in Sources */,
+				FA496144279BCD7500C8EFB6 /* BarometerView.swift in Sources */,
 				FAB8F8C3279BB4DF00F21628 /* MotionManager.swift in Sources */,
 				FAB8F894279B653A00F21628 /* EnvironmentApp.swift in Sources */,
 				FAB8F8C6279BB95200F21628 /* Barometer.swift in Sources */,
+				FAB8F8CE279BCCCD00F21628 /* RawMotionManagerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
