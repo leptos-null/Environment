@@ -13,7 +13,7 @@ final class Barometer: ObservableObject {
     
     class var isAvailable: Bool { CMAltimeter.isRelativeAltitudeAvailable() }
     
-    @Published var data: CMAltitudeData?
+    @Published private(set) var data: CMAltitudeData?
     
     func startUpdates() {
         altimeter.startRelativeAltitudeUpdates(to: .main) { [weak self] data, error in

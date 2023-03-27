@@ -12,15 +12,8 @@ import CoreMotion
 struct RawMotionManagerView<Manager: RawMotionManager>: View {
     @StateObject var rawMotionManager: Manager
     
-    private var updateIntervalBinding: Binding<TimeInterval> {
-        Binding {
-            rawMotionManager.updateInterval
-        } set: {
-            rawMotionManager.updateInterval = $0
-        }
-    }
     private var updateIntervalText: String {
-        updateIntervalBinding.wrappedValue.formatted(.number.rounded(increment: updateIntervalIncrement))
+        rawMotionManager.updateInterval.formatted(.number.rounded(increment: updateIntervalIncrement))
     }
     
     private let updateIntervalIncrement: TimeInterval.Stride = 0.01
@@ -34,11 +27,11 @@ struct RawMotionManagerView<Manager: RawMotionManager>: View {
                     ProgressView()
                 }
 #if os(watchOS)
-                Slider(value: updateIntervalBinding, in: 0...1, step: updateIntervalIncrement) {
+                Slider(value: $rawMotionManager.updateInterval, in: 0...1, step: updateIntervalIncrement) {
                     Text("Update Interval: \(updateIntervalText)")
                 }
 #else
-                Stepper(value: updateIntervalBinding, step: updateIntervalIncrement) {
+                Stepper(value: $rawMotionManager.updateInterval, step: updateIntervalIncrement) {
                     Text("Update Interval: \(updateIntervalText)")
                 }
                 .padding()
@@ -84,7 +77,7 @@ final class RawMotionManagerShim: RawMotionManager {
         }
     }
     
-    @Published var data: LogItemShim?
+    @Published private(set) var data: LogItemShim?
     
     func startUpdates() {
         timer = .scheduledTimer(withTimeInterval: updateInterval, repeats: true) { [weak self] timer in

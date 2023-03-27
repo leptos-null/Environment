@@ -11,9 +11,9 @@ import CoreMotion
 final class MotionManager {
     private let manager = CMMotionManager()
     
-    lazy var accelerometer = Accelerometer(motionManager: manager)
-    lazy var gyro = Gyro(motionManager: manager)
-    lazy var magnetometer = Magnetometer(motionManager: manager)
+    lazy private(set) var accelerometer = Accelerometer(motionManager: manager)
+    lazy private(set) var gyro = Gyro(motionManager: manager)
+    lazy private(set) var magnetometer = Magnetometer(motionManager: manager)
 }
 
 extension MotionManager {
@@ -32,7 +32,7 @@ extension MotionManager {
             set { motionManager.accelerometerUpdateInterval = newValue }
         }
         
-        @Published var data: CMAccelerometerData?
+        @Published private(set) var data: CMAccelerometerData?
         
         func startUpdates() {
             motionManager.startAccelerometerUpdates(to: .main) { [weak self] data, error in
@@ -65,7 +65,7 @@ extension MotionManager {
             set { motionManager.gyroUpdateInterval = newValue }
         }
         
-        @Published var data: CMGyroData?
+        @Published private(set) var data: CMGyroData?
         
         func startUpdates() {
             motionManager.startGyroUpdates(to: .main) { [weak self] data, error in
@@ -98,7 +98,7 @@ extension MotionManager {
             set { motionManager.magnetometerUpdateInterval = newValue }
         }
         
-        @Published var data: CMMagnetometerData?
+        @Published private(set) var data: CMMagnetometerData?
         
         func startUpdates() {
             motionManager.startMagnetometerUpdates(to: .main) { [weak self] data, error in
