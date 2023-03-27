@@ -17,6 +17,8 @@ struct ContentView: View {
                 if Barometer.isAvailable {
                     NavigationLink {
                         BarometerView(barometer: barometer)
+                            .navigationTitle("Barometer")
+                            .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         Label("Barometer", systemImage: "barometer")
                     }
@@ -24,6 +26,8 @@ struct ContentView: View {
                 if motionManager.accelerometer.isAvailable {
                     NavigationLink {
                         RawMotionManagerView(rawMotionManager: motionManager.accelerometer)
+                            .navigationTitle("Accelerometer")
+                            .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         Label("Accelerometer", systemImage: "level")
                     }
@@ -31,6 +35,8 @@ struct ContentView: View {
                 if motionManager.gyro.isAvailable {
                     NavigationLink {
                         RawMotionManagerView(rawMotionManager: motionManager.gyro)
+                            .navigationTitle("Gyro")
+                            .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         Label("Gyro", systemImage: "gyroscope")
                     }
@@ -38,11 +44,15 @@ struct ContentView: View {
                 if motionManager.magnetometer.isAvailable {
                     NavigationLink {
                         RawMotionManagerView(rawMotionManager: motionManager.magnetometer)
+                            .navigationTitle("Magnetometer")
+                            .navigationBarTitleDisplayMode(.inline)
                     } label: {
                         Label("Magnetometer", systemImage: "cube")
                     }
                 }
             }
+            .navigationTitle("Environment")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
