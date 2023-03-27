@@ -15,23 +15,19 @@ struct ContentView: View {
         TabView {
             BarometerView(barometer: barometer)
                 .tabItem {
-                    Image(systemName: "barometer")
-                    Text("Barometer")
+                    Label("Barometer", systemImage: "barometer")
                 }
             RawMotionManagerView(rawMotionManager: motionManager.accelerometer)
                 .tabItem {
-                    Image(systemName: "level")
-                    Text("Accelerometer")
+                    Label("Accelerometer", systemImage: "level")
                 }
             RawMotionManagerView(rawMotionManager: motionManager.gyro)
                 .tabItem {
-                    Image(systemName: "gyroscope")
-                    Text("Gyro")
+                    Label("Gyro", systemImage: "gyroscope")
                 }
             RawMotionManagerView(rawMotionManager: motionManager.magnetometer)
                 .tabItem {
-                    Image(systemName: "cube")
-                    Text("Magnetometer")
+                    Label("Magnetometer", systemImage: "cube")
                 }
         }
     }
